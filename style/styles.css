@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900');
+@import url('https://fonts.googleapis.com/css?family=Clicker+Script|Elsie+Swash+Caps:400,900');
+
+
+/* Command i made to generate this:
+cd ~/excepctional-realty/ && mkdir test && cd test/ && touch test.css */
+
+ /* can go to mignifier and search "digital Color Meter"
+ use it to identify color value on any object and do cmd shift */
+
+p {
+  font-size:1em; /* 1em = 16px  */
+  line-height: 1.5em;
+}
+
+figcaption {
+  /*font-weight: normal;
+  font-size:0.75em;
+  line-height: 1.5em;
+  font-family: Georgia, "New Times Roman", serif;
+  */
+  /* since their all font can be passed as bellow */
+  /* font: normal 0.75em/1.5em Georgia, "New Times Roman", serif; */
+  font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive;; /*  replacd above after google font import */
+  /* color: #00(red)00(green)FF(bleu); Hex */ /* color: #FF(highest-redl)00(black)FF(bleu); Hex */
+  /* color:#8877DD;  ALl charachters have to be a character type match in all 3 position. A short-hand  will be: 87D*/
+   color:#777; /* grey */
+   text-align: right;
+}
+
+  /* Class Selectors apply to as any elements as you like. */
+.milk-text { /* Select the elements with a class "milk-text"*/
+   font: bold  2.6em 'Elsie Swash Caps', cursive;
+   color: white;
+   text-shadow: 0 2px 3px #000;
+}
+   /* ID Selectors (applies to one UNIQUE element per page) */
+#logo {
+  background-color: aqua;
+}
+
+   /* Descendents Selectors */
+#logo h1 {/* will only style h1 if inside an element with id "logo"*/
+  font-family: 'Clicker Script', cursive;
+}
+#logo h2 {
+  font-family: 'Elsie Swash Caps', cursive;
+}
+  /* Psuedo Selector */
+#details a:link, details a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#details a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+#details a:active {
+  color: red;
+}
