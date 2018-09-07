@@ -22,7 +22,7 @@ figcaption {
   */
   /* since their all font can be passed as bellow */
   /* font: normal 0.75em/1.5em Georgia, "New Times Roman", serif; */
-  font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive;; /*  replacd above after google font import */
+  font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive; /*  replacd above after google font import */
   /* color: #00(red)00(green)FF(bleu); Hex */ /* color: #FF(highest-redl)00(black)FF(bleu); Hex */
   /* color:#8877DD;  ALl charachters have to be a character type match in all 3 position. A short-hand  will be: 87D*/
    color:#777; /* grey */
@@ -37,7 +37,7 @@ figcaption {
 }
    /* ID Selectors (applies to one UNIQUE element per page) */
 #logo {
-  background-color: aqua;
+   /* background-color: rgb(12, 233, 233); #aqua */
 }
 
    /* Descendents Selectors */
@@ -48,7 +48,7 @@ figcaption {
   font-family: 'Elsie Swash Caps', cursive;
 }
   /* Psuedo Selector */
-#details a:link, details a:visited {
+#details a:link, #details a:visited {
   color: black;
   text-decoration: none;
 }
@@ -60,4 +60,95 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+
+                  /*/////VIDEO //////*/
+
+video, img, audio { /* Confines any of the listed to strech pass their parent container*/
+  max-width: 100%
+
+
+}
+               /*///// STYLE LAYOUT //////*/
+* { 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto; /* 0 for the first value and auto for the second*/
+  /* background:#eee; gray */
+}
+
+.col-1{
+float: left;
+width: 32%;
+background: #ccc;
+}
+
+.col-2{
+float: left;
+width: 66%;
+background: #ccc;
+}
+
+.col-3{
+background:#ccc;
+}
+
+/* Anytime you have floating children you have the clearfix to the parents*/
+.clearfix:after { /* to remediate to the parent collapsing since "children/section float*/
+  content: "."; /* added content*/
+  display: block;/* display a block we will hide bellow*/
+  clear: both; /*  clear anything floating above it*/ 
+  visibility: hidden; /* hide the above block*/
+  height: 0; 
+  line-height: 0;
+
+}
+
+[class*="clo-"] { /* Anything starting with "col-": apply a 2% margin*/
+   margin-left: 2%;
+}
+
+.first {
+  margin-left: 0%; 
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right:0px;
+  width: 100px;
+  background: #fff;
+  z-index: 1;
+}
+
+
+                   /*////// SECTIONS //////*/
+
+
+
+section {   /* section still floats dow. So we need to go set the box-sizing */
+  padding:20px;
+  margin-bottom: 20px;
+}
+
+#social {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  widows:40px;
+  z-index: 1;
+
+}
+#social a { /* social space a Selects ALL*/
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: yellow;
+
 }
